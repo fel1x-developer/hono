@@ -1,6 +1,6 @@
 import { run, group, bench } from 'mitata'
-import fastQuerystring from './fast-querystring.mts'
-import hono from './hono.mts'
+import fastQuerystring from './fast-querystring.ts'
+import hono from './hono.ts'
 ;[
   {
     url: 'http://example.com/?page=1',
@@ -33,7 +33,7 @@ import hono from './hono.mts'
 ].forEach((data) => {
   const { url, key } = data
 
-  group(JSON.stringify(data), () => {
+  group(() => {
     bench('hono', () => hono(url, key))
     bench('fastQuerystring', () => fastQuerystring(url, key))
   })
