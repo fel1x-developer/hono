@@ -4,7 +4,7 @@ const arr = new Array(100000).fill(Math.random())
 
 bench('noop', () => {})
 
-group('loop', () => {
+group(() => {
   bench('map', () => {
     const newArr = []
     arr.map((e) => {

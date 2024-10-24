@@ -4,7 +4,7 @@ bench('noop', () => {})
 
 const request = new Request('http://localhost/about/me')
 
-group('getPath', () => {
+group(() => {
   bench('slice + indexOf : w/o decodeURI', () => {
     const url = request.url
     const queryIndex = url.indexOf('?', 8)

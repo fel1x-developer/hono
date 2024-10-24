@@ -1,6 +1,13 @@
 {
-  "type": "module",
   "devDependencies": {
-    "mitata": "^0.1.11"
-  }
+    "mitata": "^1.0.10",
+    "tsx": "^4.19.1"
+  },
+  "scripts": {
+    "bench:get-path:node": "tsx ./src/get-path.ts",
+    "bench:get-path:bun": "bun --bun run ./src/get-path.ts",
+    "bench:loop:node": "tsx ./src/loop.js",
+    "bench:loop:bun": "bun --bun run ./src/loop.js"
+  },
+  "type": "module"
 }
